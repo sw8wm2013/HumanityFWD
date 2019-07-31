@@ -1,0 +1,65 @@
+#regmodal{
+    display: flex;
+}
+
+    #registrationbutton {
+        background-color: #13294B;
+        border-radius: 3px;
+        height: 3rem;
+        width: 8rem;
+        color: #EAEAEA;
+        font-size: 14px;
+        font-family: 'Montserrat', 'Robot', sans-serif;
+    };
+
+    #registerform{
+        width: 50rem;
+        max-width: 100%;
+        height: 50rem;
+        margin: 0 auto;
+        position: fixed;
+        // left: 20rem;
+        // right: 20rem;
+        transform: translate (-50%, -50%);
+        z-index: 999;
+        background-color: #EAEAEA;
+        padding: 10px 20px 40px;
+        border-raidus: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-items: space-around;
+        flex-wrap:wrap;
+    };
+
+    .inputfield{
+        border: 3px solid yellow;
+        width: 50rem;
+        height: 5rem;
+    }
+
+    #fnfield, #lnfield{
+      width: 25rem;
+      display: inline-block;
+      border: 3px solid green;
+      margin-bottom: 0.5rem;
+    }
+
+
+
+
+
+
+
+#closebutton {
+    padding: 3px 8px; 
+    border-radius: 8px;
+    background-color: #EAEAEA;
+    border: none;
+    width: 1.25rem;
+    height: 1.32rem;
+    font-weight: bold;
+    position: fixed;
+    left: 71rem;
+    z-index: 1000;
+
+}
