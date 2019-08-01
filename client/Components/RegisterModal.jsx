@@ -1,21 +1,22 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+
 
 class RegisterModal extends Component {
     render(){
         let dialog = (
-        <div>
-            <button id='closebutton' onClick={this.props.onClose}>X</button>
-            <div>{this.props.children}</div>
-        </div>
+            <Fragment>
+                <button id='closebutton' onClick={this.props.onClose}>X</button>
+                <div className='truemodal'>{this.props.children}</div>
+            </Fragment>
         );
 
         if(!this.props.isOpen){
             dialog = null;
         }
         return (
-            <div>
+            <Fragment>
                 {dialog}
-            </div>
+            </Fragment>
         )
     }
 }

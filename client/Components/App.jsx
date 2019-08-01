@@ -15,6 +15,7 @@ class App extends Component {
   render(){
     return(
     <div id='joinuswrapper'>
+      <div id='test'></div>
         <JoinUsWrapper/>
     </div>
     )

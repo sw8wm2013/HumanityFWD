@@ -1,6 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component,Fragment} from 'react';
 import RegisterModal from './RegisterModal.jsx';
+import { relative } from 'path';
 
+
+
+const footerStyle = {
+    position: 'absolute',
+    bottom: 20
+};
 
 class Registration extends Component {
     constructor() {
@@ -29,9 +36,7 @@ class Registration extends Component {
             lastName: this.state.lastName,
             email: this.state.email,
             password: this.state.password
-
         }
-
         fetch('/api/submit-registration', {
             method: 'POST',
             headers: {'Content-type': 'application/JSON'},
@@ -43,34 +48,19 @@ class Registration extends Component {
     }
     render(){
         return (
-            <div id='regmodal'>
+            <Fragment>
                 <button id='registrationbutton' onClick={(e) => this.setState({isOpen:true})}>Join Our Mailing List!</button>
                 <RegisterModal id='registermodal' isOpen={this.state.isOpen} onClose={(e)=> this.setState({isOpen: false})}> 
                     <form onSubmit ={ this.handleSubmit }id='registerform' name='registerform'>
-                        {/* save fields to an object in state */}
-                        {/* <label> */}
-                            <input className='inputfield' name='firstName' id='firstName' type='text' placeholder='First Name' onChange={ this.handleChange }required></input>
-                        {/* </label> */}
-
-                        {/* <label> */}
-                            <input className='inputfield' name='lastName' id='lastName' type='text' placeholder='Last Name' onChange={ this.handleChange }required></input>
-                        {/* </label> */}
-
-                        {/* <label> */}
-                            <input className='inputfield' id='email' name='email' type='email' placeholder='Email' onChange={ this.handleChange } required></input>
-                        {/* </label> */}
-
-                        {/* <label htmlFor='password'> */}
-                            <input className='inputfield' type='password' name ='password' id="password" minLength="8" placeholder='Password'onChange={ this.handleChange } required></input>
-                        {/* </label> */}
-                        <button className='inputfield' type='submit'>Register!</button> 
-                        {/* Onclick should take object in state and send to back with API call to a post route */}
+                        <input className='inputfield' name='firstName' id='firstName' type='text' placeholder='First Name' onChange={ this.handleChange }required></input>
+                        <input className='inputfield' name='lastName' id='lastName' type='text' placeholder='Last Name' onChange={ this.handleChange }required></input>
+                        <input className='inputfield' id='email' name='email' type='email' placeholder='Email' onChange={ this.handleChange } required></input>
+                        <input className='inputfield' type='password' name ='password' id="password" minLength="8" placeholder='Password'onChange={ this.handleChange } required></input>
+                        <button className='inputfield' type='submit' id='registersubmit'>Register!</button> 
                     </form>
                 </RegisterModal>
-            </div>
+            </Fragment>
         )
     }
 };
-
-
 export default Registration;

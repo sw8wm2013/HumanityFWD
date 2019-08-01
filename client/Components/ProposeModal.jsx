@@ -1,21 +1,20 @@
-import React, {Component} from 'react';
+import React, {Component,Fragment} from 'react';
 
 class ProposeModal extends Component {
     render(){
         let dialog = (
-        <div>
-            <button onClick={this.props.onClose}>X</button>
-            <div>{this.props.children}</div>
-        </div>
+        <Fragment>
+            <button className='closeproposal' onClick={this.props.onClose}>X</button>
+            <div className='trueproposemodal'>{this.props.children}</div>
+        </Fragment>
         );
-
         if(!this.props.isOpen){
             dialog = null;
         }
         return (
-            <div>
+            <Fragment>
                 {dialog}
-            </div>
+            </Fragment>
         )
     }
 }

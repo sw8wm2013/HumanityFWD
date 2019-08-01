@@ -1,9 +1,30 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    
+}
+
+
 body {
-    background:#6CACE4;
+    background: #6cace4;;
     font-family: 'Montserrat', 'Robot', sans-serif;
     color: #EAEAEA;
-    width: 100rem;
-    height: 100rem;
-    margin: 0;
+    min-width: 100vh;
+    min-height: 100vh;
+    margin: 0 auto;
     padding:0;
+    // border: 5px solid red;
+    // display: flex;
+    // align-content: center;
+    // flex-direction: column;
+}
+
+#logo {
+    margin: 0 auto;
+}
+
+.topheader{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
 }
