@@ -5,7 +5,7 @@ import Registration from './registration.jsx';
 class JoinUs extends Component {
     render(){
         return (
-            <div>
+            <div id='buttonwrappers'>
                 <h1>JOIN US</h1>
                 <p>The Humanity Forward Fund amplifies the voices of leaders and policies that are 
               rising to meet the existential challenges of the 21st century. Today, that means 

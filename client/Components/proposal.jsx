@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+//import {Modal, Text, TouchableHighlight, View, Alert} from 'react-native';
 import ProposeModal from './ProposeModal.jsx';
 
 class ProposalButton extends Component {
