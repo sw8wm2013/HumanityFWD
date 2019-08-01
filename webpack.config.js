@@ -32,7 +32,7 @@ module.exports = {
     devServer: { 
         publicPath: '/build',
         proxy: {
-            '/': 'http://localhost:3000'
+            '/api/submit-registration': 'http://localhost:3000'
         },
         filename: 'bundle.js'
       },

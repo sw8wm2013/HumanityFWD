@@ -1,12 +1,17 @@
-const pg = require('pg');
-const db = {};
+const { Pool, Client } = require('pg');
+const connectionString = 'postgres://jssbcary:AP7enUksEs5so9k3Z_RHvUH3sJcib5WK@raja.db.elephantsql.com:5432/jssbcary';
+const pool = new Pool({connectionString: connectionString});
 
-const uri = 'postgres://jssbcary:A4xoPl4U4ShT3iJs2TfGsysw-Iet6lfS@raja.db.elephantsql.com:5432/jssbcary';
+// pool.query('SELECT NOW()', (err, res)=>{
+//     console.log(err, res)
+// });
 
+pool.query('CREATE TABLE IF NOT EXISTS users (_id SERIAL PRIMARY KEY, firstName VARCHAR, lastName VARCHAR, email VARCHAR, password VARCHAR)', (err, res) => {
+    console.log(err, res)
+  });
 
-pg.connect(uri(err,db_)=>{
-    if(err) throw new Error (err);
-    db.conn= db_;
-});
-
-module.exports = db;
+module.exports = {
+  query: (text, params, callback) => {
+    return pool.query(text, params, callback)
+  }
+};
