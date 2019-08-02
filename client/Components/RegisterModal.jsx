@@ -6,7 +6,7 @@ class RegisterModal extends Component {
         let dialog = (
             <Fragment>
                 <button id='closebutton' onClick={this.props.onClose}>X</button>
-                <div className='truemodal'>{this.props.children}</div>
+            <div className='truemodal'>{this.props.children}</div>
             </Fragment>
         );
 

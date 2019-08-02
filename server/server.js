@@ -22,6 +22,10 @@ app.post('/api/submit-registration', dbController.registerUser, (req, res, next)
   res.send(200)
 })
 
+// app.post('/api/submit-proposal' mongoseController.submitProposal, (req, res, next) =>{
+  //res.send(200)
+// })
+
 
 //post route to catch submitted info and send to controller that will then make a DB query to store in DB
 app.listen(3000);
